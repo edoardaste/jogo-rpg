@@ -1,6 +1,6 @@
 namespace dotnet_poo.src.Entities 
 {
-    public class Hero 
+    public abstract class Hero 
     {
         public Hero (string Name, int Level, string HeroType)
         {
@@ -9,11 +9,16 @@ namespace dotnet_poo.src.Entities
             this.HeroType = HeroType;
         }
 
-    public Hero(){
+    public Hero()
+    {
     }
     public string Name;
     public int Level;
     public string HeroType;
+
+     public override string Attack(){
+            return this.Name + " " + "Atacou com sua espada";
+        }
 
     public override string ToString() {
 
@@ -21,10 +26,8 @@ namespace dotnet_poo.src.Entities
     }
 
 
-    public virtual string Attack() {
-        return this.Name + " Atacou com a sua espada";
-    } 
-    }
 
 
-} 
+  } 
+
+}
